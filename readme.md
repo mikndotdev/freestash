@@ -1,7 +1,7 @@
 # freestash
 
 Run an Upstash REST API compatible database on your local machine.<br>
-This compose file will spin up a Redis database with an accompanying Upstash proxy.
+This compose file will spin up a Redis-compatible KeyDB database with an accompanying Upstash proxy.
 
 ## Usage
 **Download the compose file:**
@@ -27,4 +27,4 @@ The following environment variables can be used to configure the container.
 
 ## Credits
 
-This project is based on the [upstash-redis-local](https://github.com/darthbenro008/upstash-redis-local) project.
+This project is based on the [serverless-redis-http](https://github.com/hiett/serverless-redis-http) project.
