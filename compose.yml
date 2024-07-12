@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  upstash-proxy:
+    image: darthbenro008/upstash-redis-local
+    container_name: upstash-redis-local
+    ports:
+      - "${UPSTASH_PROXY_PORT:-8000}:8000"
+    environment:
+      - UPSTASH_TOKEN=${UPSTASH_TOKEN:-upstash}
+      - REDIS_ADDR=redis:6379
+    depends_on:
+      - redis
+
+volumes:
+  redis-data:
+    driver: local
