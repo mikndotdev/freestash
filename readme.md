@@ -4,10 +4,17 @@ Run an Upstash REST API compatible database on your local machine.<br>
 This compose file will spin up a Redis database with an accompanying Upstash proxy.
 
 ## Usage
+**Download the compose file:**
+```bash
+wget https://cdn.statically.io/gh/mikndotdev/freestash/main/compose.yml
+```
+**Create a .env file with the variables described in the Configuration section;**<br>
+**Start the containers:**
 
 ```bash
 docker-compose up -d
 ```
+**enjoy :)**
 
 ## Configuration
 
